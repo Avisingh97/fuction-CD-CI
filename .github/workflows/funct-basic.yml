@@ -10,5 +10,5 @@ jobs:
           node-version: '3.9'
       - run: python --version
         name: python script
-        run:
-            python script1.py
+        run:  python script1.py
+            
