@@ -12,7 +12,7 @@
 #       - name: python script
 #         run:  python script1.py
             
-name: main
+name: learn-github-actions
 on: push
 env:
   name1: "testing1"
