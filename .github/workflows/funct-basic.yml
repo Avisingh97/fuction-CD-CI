@@ -15,8 +15,8 @@
 name: main
 on: push
 env:
-  name1: "aviral"
-  name2: "singh"
+  name1: "testing1"
+  name2: "testing2"
 jobs:
  job1:
   runs-on: ubuntu-latest
