@@ -1,6 +1,6 @@
-# name: learn-github-actions
-# on: [push]
-# jobs:
+name: learn-github-actions
+on: [push]
+jobs:
   check-python-version:
     runs-on: self-hosted
     steps:
