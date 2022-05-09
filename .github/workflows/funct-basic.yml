@@ -13,20 +13,41 @@
 # #         run:  python script1.py
 #       - name: echo
 #         run:  echo hello world!
-name: learn-github-actions
-on: push
-env:
-  name1: "testing1"
-  name2: "testing2"
-jobs:
- job1:
-  runs-on: ubuntu-latest
-  steps:
-    - name: step 1
-      run: echo "The name1 is:$name1"
+# name: learn-github-actions
+# on: push
+# env:
+#   name1: "testing1"
+#   name2: "testing2"
+# jobs:
+#  job1:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: step 1
+#       run: echo "The name1 is:$name1"
 
- job2:
-  runs-on: ubuntu-latest
-  steps:
-    - name: step 2
-      run: echo "The name2 is:$name2"
+#  job2:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: step 2
+#       run: echo "The name2 is:$name2"
+
+name: First Cron Job
+
+       # Controls when the workflow will run
+on:
+  # Triggers the workflow every 1 minutes
+  schedule:
+    - cron: "*/1 * * * *"
+
+     # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "cron"
+  cron:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
