@@ -1,32 +1,32 @@
 # name: learn-github-actions
-on: [push]
-jobs:
-  check-python-version:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-#       - uses: actions/setup-python@v3
-#         with:
-#           python-version: '3.9'
-#       - run: python --version
-#       - name: python script
-#         run:  python script1.py
-      - name: echo
-        run:  echo hello world!
-# name: learn-github-actions
-# on: push
-# env:
-#   name1: "testing1"
-#   name2: "testing2"
+# on: [push]
 # jobs:
-#  job1:
-#   runs-on: ubuntu-latest
-#   steps:
-#     - name: step 1
-#       run: echo "The name1 is:$name1"
+#   check-python-version:
+#     runs-on: self-hosted
+#     steps:
+#       - uses: actions/checkout@v3
+# #       - uses: actions/setup-python@v3
+# #         with:
+# #           python-version: '3.9'
+# #       - run: python --version
+# #       - name: python script
+# #         run:  python script1.py
+#       - name: echo
+#         run:  echo hello world!
+name: learn-github-actions
+on: push
+env:
+  name1: "testing1"
+  name2: "testing2"
+jobs:
+ job1:
+  runs-on: ubuntu-latest
+  steps:
+    - name: step 1
+      run: echo "The name1 is:$name1"
 
-#  job2:
-#   runs-on: ubuntu-latest
-#   steps:
-#     - name: step 2
-#       run: echo "The name2 is:$name2"
+ job2:
+  runs-on: ubuntu-latest
+  steps:
+    - name: step 2
+      run: echo "The name2 is:$name2"
